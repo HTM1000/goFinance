@@ -49,6 +49,7 @@ export const Icon = styled(Feather)`
 
 export const Name = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
+    color: ${({ theme }) => theme.colors.text_dark};
     font-size: ${RFValue(14)}px;
 `;
 

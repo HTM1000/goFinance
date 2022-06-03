@@ -1,9 +1,10 @@
+import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import { Feather } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native';
 
-export const Container = styled.TouchableOpacity.attrs({
+
+export const Container = styled(RectButton).attrs({
     activeOpacity: 0.7,
 })`
     background-color: ${({ theme }) => theme.colors.shape};
@@ -16,7 +17,7 @@ export const Container = styled.TouchableOpacity.attrs({
 `;
 
 export const Category = styled.Text`
-    color: ${({ theme }) => theme.colors.shape};
+    color: ${({ theme }) => theme.colors.text_dark};
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
 `;

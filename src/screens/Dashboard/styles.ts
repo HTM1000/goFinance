@@ -4,6 +4,7 @@ import { Feather } from '@expo/vector-icons'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'; 
 import { DataListProps } from '.'
 import { FlatList } from 'react-native';
+import { BorderlessButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
     flex: 1;
@@ -57,14 +58,18 @@ export const UserName = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
+export const LogoutButton = styled(BorderlessButton)`
+
+`;
+
 export const Icon = styled(Feather)`
-    color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.attention};
     font-size: ${RFValue(24)}px;
 `;
 
 export const HightlightCards = styled.ScrollView.attrs({
         horizontal: true,
-        showHorizontalScrowIndicator: false,
+        showsHorizontalScrollIndicator: false,
         contentContainerStyle: { paddingLeft: 24 },
 })`
     width: 100%;
@@ -88,7 +93,13 @@ export const Title = styled.Text`
 `;
 
 export const TransactionList = styled.FlatList.attrs({
-    showVericalIndicator:false,
+    showsVerticalScrollIndicator: false,
     contentContainerStyle: { paddingBottom: getStatusBarHeight() }
     
 })``as React.ComponentType as new <DataListProps>() => FlatList<DataListProps>;
+
+export const LoadingContainer = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+`;

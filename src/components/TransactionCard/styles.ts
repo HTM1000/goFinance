@@ -46,12 +46,12 @@ export const Icon = styled(Feather)`
 
 export const CategoryName = styled.Text`
     color: ${({ theme }) => theme.colors.text};
-    font-size: ${RFValue(20)}px;
+    font-size: ${RFValue(14)}px;
 
     margin-left: 17px;
 `;
 
 export const Date = styled.Text`
     color: ${({ theme }) => theme.colors.text};
-    font-size: ${RFValue(20)}px;
+    font-size: ${RFValue(14)}px;
 `;

@@ -7,12 +7,12 @@ interface TypeProps {
     type: 'up' | 'down' | 'total';
 }
 export const Container = styled.View<TypeProps>`
-    background-color: ${({ theme, type }) => type === 'total' ? theme.colors.secondary : theme.colors.background};
+    background-color: ${({ theme, type }) => type === 'total' ? theme.colors.secondary : theme.colors.shape};
 
     width: ${RFValue(300)}px;
     border-radius: 5px;
 
-    padding: 19px 23px;
+    padding: 19px 23px ${RFValue(42)}px 23px;
     margin-bottom: ${RFValue(42)}px;
     margin-right: 16px;
 
@@ -57,9 +57,9 @@ export const Amount = styled.Text<TypeProps>`
     margin-top: 38px;
 `;
 
-export const  LastTransaction = styled.Text`
+export const  LastTransaction = styled.Text<TypeProps>`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(12)}px;
 
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme, type }) => type === 'total' ? theme.colors.shape : theme.colors.text_dark};
 `;
