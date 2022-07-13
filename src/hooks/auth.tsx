@@ -80,7 +80,6 @@ function AuthProvider({ children }: AuthProviderProps){
             });
 
             if(credential){
-
                 const name = credential.fullName!.givenName!
                 const photo = `https://ui.avatars.com/api/?name=${name}&lenght=1`
                 
@@ -93,10 +92,7 @@ function AuthProvider({ children }: AuthProviderProps){
 
                 setUser(userLogged)
                 await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged));
-            }
-
-            
-            
+            }            
         } catch (error) {
             throw new Error(error)
         }

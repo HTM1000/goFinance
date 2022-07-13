@@ -2,7 +2,6 @@ import React from 'react';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 
-
 import { StatusBar } from 'react-native';
 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -19,9 +18,6 @@ import {
   Poppins_500Medium,
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins'
-
-
-
 
 export default function App() {
   const [fontsLoaded] = useFonts({
